@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class PriceCalculator {
 	
-	final static int priceApple = 35;
-	final static int priceBanana = 20;
-	final static int priceMelon = 50;
-	final static int priceLime = 15;
-	final static ArrayList<String> basketList = new ArrayList<String>();
+	final int priceApple = 35;
+	final int priceBanana = 20;
+	final int priceMelon = 50;
+	final int priceLime = 15;
+	final ArrayList<String> basketList = new ArrayList<String>();
 	
-	static int calculateBaskedCost(ArrayList<String> basketList) {
+	public int calculateBaskedCost(ArrayList<String> basketList) {
 		int basketCost = 0;
 		int countMelon = 0, countLime = 0;
 		for (String item : basketList) {
