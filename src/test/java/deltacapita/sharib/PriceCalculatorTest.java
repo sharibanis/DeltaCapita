@@ -18,6 +18,13 @@ public class PriceCalculatorTest {
 	}
 	
 	@Test
+	public void priceTestForNullBasket2() {
+		basketList = null;
+		int basketCost = priceCalculator.calculateBaskedCost(basketList);
+		assertEquals(-1, basketCost);
+	}
+	
+	@Test
 	public void priceTestForEmptyBasket() {
 		int basketCost = priceCalculator.calculateBaskedCost(basketList);
 		assertEquals(-1, basketCost);
