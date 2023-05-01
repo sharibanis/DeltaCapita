@@ -11,6 +11,10 @@ public class PriceCalculator {
 	final ArrayList<String> basketList = new ArrayList<String>();
 	
 	public int calculateBaskedCost(ArrayList<String> basketList) {
+		if (basketList == null || basketList.size() == 0) {
+			System.out.println("Invaid arguments: "+basketList);
+			return -1;
+		}
 		int basketCost = 0;
 		int countMelon = 0, countLime = 0;
 		for (String item : basketList) {

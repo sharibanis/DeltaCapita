@@ -11,12 +11,25 @@ public class PriceCalculatorTest {
 	PriceCalculator priceCalculator = new PriceCalculator();
 	
 	@Test
+	public void priceTestForNullBasket() {
+		basketList = null;
+		int basketCost = priceCalculator.calculateBaskedCost(basketList);
+		assertEquals(-1, basketCost);
+	}
+	
+	@Test
+	public void priceTestForEmptyBasket() {
+		int basketCost = priceCalculator.calculateBaskedCost(basketList);
+		assertEquals(-1, basketCost);
+	}
+	
+	@Test
 	public void priceTestForApple() {
 		basketList.add("Apple");
 		int basketCost = priceCalculator.calculateBaskedCost(basketList);
 		assertEquals(35, basketCost);
 	}
-	
+
 	@Test
 	public void priceTestForAppleAppleBanana() {
 		basketList.add("Apple");
