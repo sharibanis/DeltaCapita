@@ -12,7 +12,7 @@ public class PriceCalculator {
 	
 	public int calculateBaskedCost(ArrayList<String> basketList) {
 		if (basketList == null || basketList.size() == 0) {
-			System.out.println("Invaid arguments: "+basketList);
+			System.out.println("Invalid arguments: "+basketList);
 			return -1;
 		}
 		int basketCost = 0;
